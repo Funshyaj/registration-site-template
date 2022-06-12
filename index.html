@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Registrationsite.com</title>
+	<link rel="stylesheet" type="text/css" href="reg.css">
+
+	<script type="text/javascript">
+ function myFunc()
+ {var date = new Date();
+ alert(date);}
+		
+function Dodo(){
+		if (confirm ("Do you love this code?")) {alert("please leave a thumbs up!");}
+else{alert("we'll improve on it, Thank you");}}
+
+ function myDo()
+{var img = document.getElementsById("img");
+img.setAttribute(src," download.jpg");}
+	
+var btn = document.getElementById("btn");
+btn.addEventlistener("click",function(){alert("hello");});
+
+var input =document.getElementByTagName("input")[0];
+
+input.addEventlistener("change", function(){document.getElementByTagName("p").innerHTML =  input.value;});
+
+
+var httpRequest = new XMLHttpRequest();
+
+function sendGetRequest(){
+	httpRequest.onreadystatechange= WriteContent();
+
+	httpRequest.open("Get" ,"https://codeliber.com/test-server.php?firstName=johnn&lastName =Doe");
+    httpRequest.send();
+}
+
+function writecontent()
+{if (httpRequest.readyState === 4) {if (httpRequest.status ===200) 
+	{var response = httpRequest.responseText;
+		document.getElementsById("demo").innerHTML= response;}
+else {alert("There was a problem wih the request");}
+}}
+
+
+
+ function Dododo ()
+ {var firstName = prompt("What is your first name?");
+if (firstName == null || firstName == "")
+	{alert("you did not enter any value");}
+else{alert (Welcome + "firstName");}}
+
+
+</script>
+
+
+</head>
+<body>
+
+	<button onclick= "myFunc()">Display time and date</button>
+
+	<img id="img">
+	<button onclick="Dodo()">show img</button>
+
+	
+
+<button onclick="Dodo()">show dialog </button>
+	
+	<input type="text" name="text">
+
+	<p id="demo"></p>
+		<button onclick="sendGetRequest()">get response</button>
+	<button onclick="Dododo()">enter</button>
+<div class="regform">
+	<h1>
+	Registration form	
+	</h1>
+</div>
+<div class="main">
+<form>
+	<div id="name">
+	<h2 class="name">Name</h2>
+	<input class="firstname"
+	 type="text" name="firstname" required><br>
+	<label class="firstlabel">first name <span style="color: red;">*Required</span></label><br>
+	<input class="lastname" type="text" name="lastname" required><br>
+	<label class="lastlabel">last name <span style="color: red;">*Required</span></label>		
+</div>
+
+	<h2 id="cpname">Company</h2>
+<input class="Company" type="text" name="Company"><br>
+<label class="Company_label">Ignore If you are a student </label> 
+
+<h2 class="name">School</h2>
+<input class="email" type="text" name="School"><br>
+<label class="firstlabel">please fill in if youre a student</label>
+
+	<h2 class="name">Email</h2>
+<input class="email" type="text" name="" required><br>
+<label class="firstlabel"><span style="color: red;">*Required</span></label>
+
+
+	<h2 class="name">Phone</h2>
+<input class="code" type="number" name="area_code">
+<label class="area_code">area code</label>
+<input class="number" type="text" name="area_code" required>
+<label class="phonenumber">number</label>
+
+<h2 class="name">Select subject</h2>
+<select class="option" name="subject">
+
+<option disabled="disabled" selected="selected">--choose option</option>
+<option>subject 1</option>
+<option>subject 2</option>
+<option>subject 3</option>
+</select>
+
+<h2 id="student">Are you  beginner?</h2> 
+<label class="radio">
+	<input class="radio-one" type="radio" name="radio">
+	<span class="checkmark"></span>
+Yes</label>
+
+<label class="radio">
+	<input class="radio-two" type="radio" name="">
+	<span class="checkmark"></span>
+No</label>
+	
+<button type="submit">Register</button>
+	</form>
+	</div>
+</div>
+</body>
+</html>
